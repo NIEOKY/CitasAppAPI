@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "bUm1vPqwZHJejLhtNIB7WgmMI8ngxypkYrDApg4MvgQ=",
-  "Source": "API",
-  "BasePath": "_content/API",
+  "Hash": "2piagh0j8ZjpL/cXXABC1BM7aI7DgnNhaJd8Qb6jhI0=",
+  "Source": "CitasAppAPI",
+  "BasePath": "_content/CitasAppAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

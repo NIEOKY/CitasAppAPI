@@ -1,27 +1,31 @@
-using API.Data;
-using API.Entities;
+using CitasAppAPI.Data;
+using CitasAppAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-[ApiController]
-[Route("api/[controller]")] //api/users
-public class UsersController : ControllerBase
+namespace CitasAppAPI.Controllers
 {
-    private readonly DataContext _context;
-    public UsersController(DataContext context)
+    [Route("[controller]")]
+    public class UsersController : Controller
     {
-        _context = context;
-    }
+        private readonly DataContext _context;
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
-    {
-        return await _context.Users.ToListAsync();
-    }
+        public UsersController(DataContext context)
+        {
+            _context = context;
+        }
+        [HttpGet]
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<AppUser>> GetUser(int id)
-    {
-        return await _context.Users.FindAsync(id);
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+            var users = await _context.Users.ToListAsync();
+            return Ok(users);
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
+            return Ok(user);
+        }
     }
 }

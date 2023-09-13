@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API.csproj", "{37724C57-AC45-4F77-BCDA-962EDC3584B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CitasAppAPI", "CitasAppAPI.csproj", "{FF6D7384-2DC8-4412-82A0-B55D1C3CC9AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37724C57-AC45-4F77-BCDA-962EDC3584B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37724C57-AC45-4F77-BCDA-962EDC3584B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37724C57-AC45-4F77-BCDA-962EDC3584B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37724C57-AC45-4F77-BCDA-962EDC3584B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6D7384-2DC8-4412-82A0-B55D1C3CC9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6D7384-2DC8-4412-82A0-B55D1C3CC9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6D7384-2DC8-4412-82A0-B55D1C3CC9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6D7384-2DC8-4412-82A0-B55D1C3CC9AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B21FDA2E-35B8-4CC6-822D-7EDC6CA42F74}
+		SolutionGuid = {6A6B1ABC-DF00-4935-B0AB-B1AF24966BF3}
 	EndGlobalSection
 EndGlobal
