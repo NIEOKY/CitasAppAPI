@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yxt2+qcx5B+DC12ArUlvoM5G03gQ7XkVwSzJKMGcHlhGsfGqMPAd7yMRoo2CD2+fY7itbLhMUzdAgx9V6Cmu2g==",
+  "dgSpecHash": "UHUg076NBsuAdXpgCVvA4/KX6rJBLjOKwsESpDjWwTVuECQsA1lxYr2lyqEO4NdyXIhgMHdLwKqqQTh+cYjPxA==",
   "success": true,
-  "projectFilePath": "C:\\proyectos\\CitasAppAPI\\CitasAppAPI.csproj",
+  "projectFilePath": "c:\\proyectos\\CitasAppAPI\\CitasAppAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\orlan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\orlan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
