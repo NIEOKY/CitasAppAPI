@@ -1,12 +1,13 @@
 using CitasAppAPI.Data;
 using CitasAppAPI.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CitasAppAPI.Controllers
 {
-    [Route("[controller]")]
-    public class UsersController : Controller
+    [Authorize]
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
 
@@ -14,6 +15,7 @@ namespace CitasAppAPI.Controllers
         {
             _context = context;
         }
+        [AllowAnonymous]
         [HttpGet]
 
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
@@ -21,6 +23,7 @@ namespace CitasAppAPI.Controllers
             var users = await _context.Users.ToListAsync();
             return Ok(users);
         }
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
