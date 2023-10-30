@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wL7xeFdNwckTdTPeurXMqVbs0m7KuCEuMxAplVlXxGQTWywWIWHrKonyJck534XAcB7FBRTBGuOYC7D1eX/BtA==",
+  "dgSpecHash": "2x1fDuIzhGc5/mJL/eBklPrbVJc8tZ0OP42ne/S0KHTtXfICNp371A4+L6MclWK2yQeaaoKPGtsVZR/lqdfz5Q==",
   "success": true,
-  "projectFilePath": "c:\\proyectos\\CitasAppAPI\\CitasAppAPI.csproj",
+  "projectFilePath": "C:\\proyectos\\CitasAppAPI\\CitasAppAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\orlan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\orlan\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.11\\microsoft.aspnetcore.authentication.jwtbearer.7.0.11.nupkg.sha512",
