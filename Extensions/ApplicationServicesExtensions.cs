@@ -4,18 +4,20 @@ using CitasAppAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace CitasAppAPI.Extensions;
-
-public static class ApplicationServicesExtensions
+public static class ApplicationServiceExtensions
 {
-    public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
+    public static IServiceCollection AddApplicationServices(
+        this IServiceCollection services,
+        IConfiguration config)
     {
-        services.AddDbContext<DataContext>(options => 
+        services.AddDbContext<DataContext>(opt =>
         {
-            options.UseSqlite(config.GetConnectionString("DefaultConnection"));
+            opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
         });
-
         services.AddCors();
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         return services;
     }

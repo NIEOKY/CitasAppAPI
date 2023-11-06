@@ -32,7 +32,7 @@ namespace CitasAppAPI.Controllers
             using var hmac = new HMACSHA512();
             var user = new User
             {
-                Username = registerDto.Username.ToLower(),
+                UserName = registerDto.Username.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
                 PasswordSalt = hmac.Key
             };
@@ -40,7 +40,7 @@ namespace CitasAppAPI.Controllers
             await _context.SaveChangesAsync();
             return new UserDto
             {
-                Username = user.Username,
+                Username = user.UserName,
                 Token = _tokenService.CreateToken(user)
             };
 
@@ -48,14 +48,14 @@ namespace CitasAppAPI.Controllers
 
         private async Task<bool> ValidateUser(String username)
         {
-            return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
+            return await _context.Users.AnyAsync(x => x.UserName == username.ToLower());
         }
 
         [HttpPost("login")]
 
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x => x.Username == loginDto.Username.ToLower());
+            var user = await _context.Users.SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
             if (user == null)
             {
                 return Unauthorized(USER_PASSWORD_MESSAGE);
@@ -71,7 +71,7 @@ namespace CitasAppAPI.Controllers
             }
             return new UserDto
             {
-                Username = user.Username,
+                Username = user.UserName,
                 Token = _tokenService.CreateToken(user)
             };
 
@@ -79,7 +79,7 @@ namespace CitasAppAPI.Controllers
 
         public async Task<bool> UserExists(String username)
         {
-            return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
+            return await _context.Users.AnyAsync(x => x.UserName == username.ToLower());
         }
     }
 
