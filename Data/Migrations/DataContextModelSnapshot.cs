@@ -49,57 +49,47 @@ namespace CitasAppAPI.Data.Migrations
 
             modelBuilder.Entity("CitasAppAPI.Entities.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime?>("Created")
                         .HasColumnType("TEXT");
 
                     b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Interests")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Introduction")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("KnownAs")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("LastActive")
+                    b.Property<DateTime?>("LastActive")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LookingFor")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("BLOB");
 
                     b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
                         .HasColumnType("BLOB");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CitasAppAPI.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231106203842_ExtendedUserEntity")]
-    partial class ExtendedUserEntity
+    [Migration("20231120203610_MakeCityOptional")]
+    partial class MakeCityOptional
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,57 +52,47 @@ namespace CitasAppAPI.Data.Migrations
 
             modelBuilder.Entity("CitasAppAPI.Entities.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
-                     
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Country")
-                     
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime?>("Created")
                         .HasColumnType("TEXT");
 
                     b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
-                        
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Interests")
-                       
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Introduction")
-                       
                         .HasColumnType("TEXT");
 
                     b.Property<string>("KnownAs")
-                       
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("LastActive")
+                    b.Property<DateTime?>("LastActive")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LookingFor")
-                        
                         .HasColumnType("TEXT");
 
                     b.Property<byte[]>("PasswordHash")
-                        
                         .HasColumnType("BLOB");
 
                     b.Property<byte[]>("PasswordSalt")
-                        
                         .HasColumnType("BLOB");
 
                     b.Property<string>("UserName")
-                       
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
